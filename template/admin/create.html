@@ -1,0 +1,28 @@
+{% extends "admin/adminbase.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+  Create Post
+{% endblock title %}
+{% block content %}
+
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-10 mx-auto">
+                <h3>Create Post</h3>
+            <hr>
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+            {{form.category|as_crispy_field}}
+	         {{form.title|as_crispy_field}}
+	         {{form.image_1|as_crispy_field}}
+	         {{form.excerpt|as_crispy_field}}
+            {{form.content|as_crispy_field}}
+            {{form.status|as_crispy_field}}
+               
+                <button class="btn btn-info">Upload Post</button>
+            </form>
+                 
+        </div>
+        
+
+{% endblock content %}
