@@ -41,31 +41,33 @@
                 <div class="bg-light mb-3 p-5">
                     <h6 class="font-weight-bold display-5">Get in touch</h6>
                     <div class="d-flex align-items-center mb-3">
-                        <i class="fab fa-2x  fa-whatsapp text-primary mr-3"></i>
+                        <i class="fab fa-2x  fa-whatsapp mr-3"></i>
                         <div class="d-flex flex-column">
                             <h6 class="font-weight-bold">Chat on whatsapp</h6>
-                            <a href="https://wa.me/+237677904248" target="_blank" style="text-decoration: none">
-                                <p class="m-0">+237677904248</p>
+                            <a href="https://wa.link/9b6ce9" target="_blank" style="text-decoration: none">
+                                <p class="m-0" style="color: blue;">{{contactus.whatsapp}}</p>
                             </a>
 
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
-                        <i class="fa fa-2x fa-envelope-open text-primary mr-3"></i>
+                        <i class="fa fa-2x fa-envelope-open mr-3"></i>
                         <div class="d-flex flex-column">
                             <h6 class="font-weight-bold">Email Us</h6>
-                            <a href="mailto:wainkem@gmail.com" target="_blank" style="text-decoration: none">
-                                <p class="m-0">*********@gmail.com</p>
+                            <a href="mailto:{{contactus.email}}" target="_blank" style="text-decoration: none">
+                                <p class="m-0" style="color: blue;">
+                                {{contactus.email}}
+                                </p>
                             </a>
 
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-2x fa-phone-alt text-primary mr-3"></i>
+                        <i class="fas fa-2x fa-phone-alt mr-3"></i>
                         <div class="d-flex flex-column">
                             <h6 class="font-weight-bold">Call Us</h6>
-                            <a href="tel:+23755555" target="_blank" style="text-decoration: none">
-                                <p class="m-0">+237 77774</p>
+                            <a href="tel:{{contactus.phone_number}}" target="_blank" style="text-decoration: none">
+                                <p class="m-0" style="color: blue;">{{contactus.phone_number}}</p>
                             </a>
 
                         </div>

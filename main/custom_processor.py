@@ -8,5 +8,5 @@ def category_renderer(request):
             status='published').order_by('view_count')[:3],
         'trend' : Post.objects.filter(
             Q(status='published') & Q(view_count__gte=10))[:7],
-        # 'contactus' : ContactUs.objects.get(id=1)
+        'contactus' : ContactUs.objects.get(id=1)
     }

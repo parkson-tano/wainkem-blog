@@ -67,7 +67,6 @@ class PostView(TemplateView):
         new_comment.save()
         return self.get(self, request, *args, **kwargs)
 
-
 class SearchView(TemplateView):
     template_name = 'search-result.html'
 
@@ -79,14 +78,12 @@ class SearchView(TemplateView):
         context["result"] = result
         return context
 
-
 class CategoryDetailView(TemplateView):
     template_name = 'category.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         url_slug = kwargs['slug']
-        allcategory = Category.objects.all()
         category = Category.objects.get(slug=url_slug)
         post = Post.objects.filter(Q(category=category) & Q(status = 'published'))
         top = Post.objects.filter(Q(category=category) & Q(status='published')).order_by('view_count')[:4]
